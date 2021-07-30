@@ -11,5 +11,15 @@
     "dev-pro-solution"
   ],
   "author": "sahbi bannour",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "^4.17.1",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  }
 }
