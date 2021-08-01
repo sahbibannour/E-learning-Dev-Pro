@@ -3,14 +3,26 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 const passport = require("passport");
-const console = require("console");
-
+const mongoose = require("mongoose");
+const db = require("./Config/database")
 const auth = require("./Routes/user.route");
+require('dotenv').config();
+
+
+
+const MONGO_HOSTNAME = process.env.MONGO_HOSTNAME;
+const MONGO_PORT = process.env.MONGO_PORT;
+const MONGO_DB = process.env.MONGO_DB;
+const DB_URL = `mongodb://${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}`
+db.connect(DB_URL);
+
+
+
 
 
 const app = express();
 
-const port =3000;
+const port =process.env.PORT;
 
 app.use(cors());
 

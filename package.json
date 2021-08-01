@@ -16,10 +16,12 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
     "cors": "*",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "jsonwebtoken": "*",
     "mongoose": "*",
     "passport": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "mysql": "*"
   }
 }
