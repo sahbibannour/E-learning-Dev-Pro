@@ -7,6 +7,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { NewsComponent } from './Components/news/news.component';
 import { UserComponent } from './user.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { RegisterComponent } from './Components/register/register.component';
     NavbarComponent,
     NewsComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

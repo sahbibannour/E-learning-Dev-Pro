@@ -13,6 +13,7 @@
   "author": "sahbi bannour",
   "license": "ISC",
   "dependencies": {
+    "@angular/flex-layout": "^12.0.0-beta.34",
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
     "cors": "*",
@@ -20,8 +21,9 @@
     "express": "^4.17.1",
     "jsonwebtoken": "*",
     "mongoose": "*",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "passport": "*",
-    "passport-jwt": "*",
-    "mysql": "*"
+    "passport-jwt": "*"
   }
 }
