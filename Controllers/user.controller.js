@@ -1,31 +1,38 @@
 const User =require('../Models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = mongoose.model('users');
+
+
 
 const register = (req , res, next)=>{
-let user = new User({
-    fullName:req.body.fullName,
-    email:req.body.email,
-    password:req.body.password,
-    phone:req.body.phone,
+
+let user = new User();
+    user.fullName=req.body.fullName;
+    user.email=req.body.email;
+    user.password=req.body.password;
+    user.phone=req.body.phone;
+    console.log(req.body);
    
-});
 
-
-
-User.save()
+user.save()
         .then(User =>{
         res.json({
             message:'user added'
         })
         }) .catch(error =>{
+            console.log(error);
             res.json({
-                message:'error yu have !!'
+                message:'error you have !!'
             })
             });
 
 
 }
+
+
+
+
+
+
 
 module.exports={register}
