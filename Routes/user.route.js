@@ -5,9 +5,7 @@ const UserController = require("../Controllers/user.controller");
 
 
 
-router.get('/login',(req,res)=>{
-    res.send("login")
-});
+router.get('/login',UserController.authenticate);
 
 router.post('/register',UserController.register);
 

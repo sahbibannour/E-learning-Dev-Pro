@@ -17,6 +17,18 @@ let userSchema = new mongoose.Schema({
   phone: {
     type: String
    
+  },
+  birthday: {
+    type: String
+   
+  },
+  role: {
+    type: String
+   
+  },
+  admin: {
+    type: String
+   
   }
  
 });
