@@ -2,26 +2,34 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
-import { LoginComponent } from './Components/login/login.component';
+
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { NewsComponent } from './Components/news/news.component';
 import { UserComponent } from './user.component';
 import { RegisterComponent } from './Components/register/register.component';
-import { HomeComponent } from './components/home/home.component';
+
+import { HomeuserComponent } from './Components/homeuser/homeuser.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { SigninComponent } from './Components/signin/signin.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 @NgModule({
   declarations: [
-    LoginComponent,
+   
     NavbarComponent,
     NewsComponent,
     UserComponent,
     RegisterComponent,
-    HomeComponent
+    HomeuserComponent,
+    ContactComponent,
+    SigninComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+   
   ]
 })
 export class UserModule { }

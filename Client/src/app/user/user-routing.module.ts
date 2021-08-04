@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './Components/login/login.component';
+import { ContactComponent } from './Components/contact/contact.component';
+
+import { HomeuserComponent } from './Components/homeuser/homeuser.component';
+
 import { NewsComponent } from './Components/news/news.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { SigninComponent } from './Components/signin/signin.component';
 import { UserComponent } from './user.component';
 
 const routes: Routes = [
@@ -12,7 +16,7 @@ const routes: Routes = [
     children:[
       {
         path:'login',
-        component:LoginComponent,
+        component:SigninComponent,
       },
       {
         path:'news',
@@ -21,6 +25,14 @@ const routes: Routes = [
       {
         path:'register',
         component:RegisterComponent
+      },
+      {
+        path:'',
+        component:HomeuserComponent
+      },
+      {
+        path:'contact',
+        component:ContactComponent
       }
     ]
   }
