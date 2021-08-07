@@ -5,8 +5,10 @@ const UserController = require("../Controllers/user.controller");
 
 
 
-router.get('/login',UserController.authenticate);
+router.post('/login',UserController.authenticate);
 
 router.post('/register',UserController.register);
+
+router.get('/profile',UserController.profile);
 
 module.exports=router;

@@ -6,7 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsComponent } from './components/settings/settings.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { HomeComponent } from './home.component';
 
 
@@ -21,7 +21,7 @@ import { HomeComponent } from './home.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FlexLayoutModule
+
   ]
 })
 export class HomeModule { }

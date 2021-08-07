@@ -14,7 +14,7 @@ const routes: Routes = [
         component:SettingsComponent,
       },
       {
-        path:'dashboard',
+        path:'',
         component:DashboardComponent,
       },
      

@@ -1,13 +1,16 @@
 var User =require('../Models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const config = require('../Config/config');
 
 
 
 module.exports.register = (req , res, next)=>{
 
 let user = new User();
+var HashedPassword = bcrypt.hash(req.body.password, 10);
     user.fullName=req.body.fullName;
+    user.userName=req.body.userName
     user.email=req.body.email;
     user.password=req.body.password;
     user.phone=req.body.phone;
@@ -16,18 +19,15 @@ let user = new User();
     user.admin="non";
     console.log(user);
    
+User.addUser(user,(err,user)=>{
+   if(err){
+        res.json({success:false , msg:"failed to register user "});
+   }else
+   {
+    res.json({success:true , msg:" user registered "});
+   }
 
-user.save()
-        .then(User =>{
-        res.json({
-            message:'user added'
-        })
-        }) .catch(error =>{
-            console.log(error);
-            res.json({
-                message:'error you have !!'
-            })
-            });
+});
 
 
 }
@@ -35,19 +35,45 @@ user.save()
 
 
 module.exports.authenticate = (req, res, next) => {
-    let user = new User();
-    user.collection.findOne({
-      email: req.body.email
-    }, function (err, user) {
+  const userName = req.body.userName;
+  const password = req.body.password;
+  User.GetUserByUserName(userName,(err, user)=> {
       if (err) throw err;
       if (!user) {
-        res.status(401).send({ success: false, msg: 'utilisateur non trouvee.' });
-      } else {
-        
-        console.log("else");
-      }
+        return res.json({ success: false, msg: 'utilisateur non trouvee.' });
+      } 
+      User.CamparePassword (password , user.password , (err ,isMatch)=>{
+        if(err) throw err;
+        if(isMatch){
+          const token = jwt.sign({data:User},config.mysecret, {expiresIn : 604800});
+         res.json({ 
+           success:true,
+           token : 'jwt :'+token,
+           id:user.id,
+           userName:user.userName,
+           email:user.email,
+         });
+
+
+
+
+
+        }else{
+          return res.json({ success: false, msg: 'password is wrong' });
+        }
+
+
+      });
     
     });
+
+  }
+
+
+  module.exports.profile = (req, res, next) => {
+
+
+
 
   }
 

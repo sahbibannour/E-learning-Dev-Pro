@@ -9,6 +9,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { HomeModule } from './home/home.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     UserModule,
     RouterModule,
-    HomeModule
+    HomeModule,
+    BrowserAnimationsModule
     
   
     
