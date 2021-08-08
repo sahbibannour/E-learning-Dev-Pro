@@ -13,9 +13,15 @@ const app = express();
 
 const port =process.env.PORT;
 
+
+
+
 app.use(cors());
 
 app.use(bodyParser.json());
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/auth',auth);
 

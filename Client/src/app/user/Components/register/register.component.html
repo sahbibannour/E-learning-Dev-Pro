@@ -23,19 +23,19 @@
     <div class="form-group">
     <div class="input-icon">
     <i class="lni-user"></i>
-    <input type="text" class="form-control" name="name" placeholder="Username">
+    <input type="text" class="form-control" name="userName" [(ngModel)]="user.userName"  placeholder="Username">
     </div>
     </div>
     <div class="form-group">
     <div class="input-icon">
     <i class="lni-envelope"></i>
-    <input type="text" class="form-control" name="email" placeholder="Email Address">
+    <input type="text" class="form-control" name="email" [(ngModel)]="user.email" placeholder="Email Address">
     </div>
     </div>
     <div class="form-group">
     <div class="input-icon">
     <i class="lni-lock"></i>
-    <input type="password" class="form-control" placeholder="Password"> 
+    <input type="password" class="form-control" name="password" placeholder="password" [(ngModel)]="user.password"> 
     </div>
     </div>
     <div class="form-group">
@@ -44,7 +44,7 @@
     <input type="password" class="form-control" placeholder="Retype Password">
     </div>
     </div>
-    <button class="btn btn-common log-btn mt-3 bg-success">Register</button>
+    <button class="btn btn-common log-btn mt-3 bg-success" (click)="onRegisterSubmit()">Register</button>
     <p class="text-center">Already have an account?<a href="login.html"> Sign In</a></p>
     </form>
     </div>

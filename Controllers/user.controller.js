@@ -1,7 +1,8 @@
 var User =require('../Models/user');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const config = require('../Config/config');
+var bcrypt = require('bcryptjs');
+var jwt = require('jsonwebtoken');
+var config = require('../Config/config');
+
 
 
 
@@ -48,11 +49,13 @@ module.exports.authenticate = (req, res, next) => {
           const token = jwt.sign({data:User},config.mysecret, {expiresIn : 604800});
          res.json({ 
            success:true,
-           token : 'jwt :'+token,
+           token : 'jwt'+token,
+           user:{
            id:user.id,
            userName:user.userName,
-           email:user.email,
-         });
+           email:user.email
+          }
+           });
 
 
 
@@ -70,11 +73,13 @@ module.exports.authenticate = (req, res, next) => {
   }
 
 
-  module.exports.profile = (req, res, next) => {
-
-
-
-
+  module.exports.profile = (req,res)=>{
+   
+     res.json(req.body);
   }
+
+
+
+  
 
 

@@ -80,3 +80,7 @@ body {
     background-color: #0d6efd ;
     border-color: #0d6efd 
 }
+
+#toast-container > .toast {
+    width: 1200px; /* width: 100% */
+  }

@@ -13,7 +13,9 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { SigninComponent } from './Components/signin/signin.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { CoursesComponent } from './Components/courses/courses.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,10 @@ import { CoursesComponent } from './Components/courses/courses.component';
   imports: [
     CommonModule,
     UserRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot()
+    
    
   ]
 })
