@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
       data => {
            this.resultat=data;
            if(this.resultat.success){
-             this.showSuccess();
+             this.showSuccessRegister() ;
            }
             
          },
@@ -41,7 +41,9 @@ export class RegisterComponent implements OnInit {
     );
   }
 
-  showSuccess() {
+
+
+  showSuccessRegister() {
     this.toastr.success('your register is succes', 'welecome Dev-Pro-Solutions!',{
       timeOut: 2000,
     });

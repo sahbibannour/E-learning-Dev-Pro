@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path:'profil',
     loadChildren : () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:'dashboard',
+    loadChildren : () => import('./admin/admin.module').then(m => m.AdminModule)
   }
 ];
 

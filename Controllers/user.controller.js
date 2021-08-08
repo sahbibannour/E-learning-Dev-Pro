@@ -17,7 +17,7 @@ var HashedPassword = bcrypt.hash(req.body.password, 10);
     user.phone=req.body.phone;
     user.birthday=req.body.birthday;
     user.role=req.body.role;
-    user.admin="non";
+    user.admin=false;
     console.log(user);
    
 User.addUser(user,(err,user)=>{
@@ -53,7 +53,8 @@ module.exports.authenticate = (req, res, next) => {
            user:{
            id:user.id,
            userName:user.userName,
-           email:user.email
+           email:user.email,
+           admin:user.admin
           }
            });
 

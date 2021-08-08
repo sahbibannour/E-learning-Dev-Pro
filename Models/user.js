@@ -12,7 +12,7 @@ let userSchema = new mongoose.Schema({
         phone:  String,
         birthday: String,
         role:  String,
-        admin: String
+        admin: Boolean
    });
 
 
