@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule} from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 
+
 @NgModule({
   declarations: [
    
@@ -35,7 +36,8 @@ import { ToastrModule } from 'ngx-toastr';
     UserRoutingModule,
     HttpClientModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+ 
     
    
   ]

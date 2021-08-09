@@ -23,6 +23,8 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+
 app.use('/auth',auth);
 
 app.get('',(req,res)=>{

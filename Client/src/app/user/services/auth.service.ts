@@ -18,4 +18,15 @@ export class AuthService {
     return this.http.post('http://localhost:3000/auth/login', user);
   }
 
+IsLogin(){
+  let token = localStorage.getItem("token");
+  if(token){
+      return true;
+  }else{
+      return false;
+  }
+}
+
+
+
 }

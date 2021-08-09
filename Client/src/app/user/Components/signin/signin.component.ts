@@ -18,22 +18,27 @@ export class SigninComponent implements OnInit {
  };
  resultat :any;
  ngOnInit(): void {
-  
+  if (this.auth.IsLogin()){
+    this.router.navigate(['/profil']);
+  }
  }
 
  onLoginSubmit() {
 
  
-  console.log(this.user);
+ 
    this.auth.LoginUser(this.user).subscribe(
      data => {
           this.resultat=data;
-          console.log(this.resultat);
+         
           if(this.resultat.success == true && this.resultat.user.admin ==false){
             this.showSuccessLogin() ;
             this.router.navigate(['/profil']);
+            console.log(this.resultat.token);
+            localStorage.setItem("token",this.resultat.token);
+            localStorage.setItem("username",this.resultat.user.userName);
           }else{
-            console.log(this.resultat.user.admin);
+           
             if(this.resultat.success == true && this.resultat.user.admin ==true){
               this.showSuccessLogin() ;
               this.router.navigate(['/dashboard']);
@@ -43,8 +48,7 @@ export class SigninComponent implements OnInit {
             this.showError();
             this.router.navigate(['/']);
           }
-
-
+         
         } 
         },
         error =>{
