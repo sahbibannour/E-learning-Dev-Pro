@@ -13,6 +13,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { CalendarComponent } from './components/calendar/calendar.component';
 
 
+
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -25,7 +27,9 @@ import { CalendarComponent } from './components/calendar/calendar.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+  
+  
    
 
   ]
