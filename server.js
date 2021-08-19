@@ -6,6 +6,7 @@ const passport = require("passport");
 
 const db = require("./Config/database")
 const auth = require("./Routes/user.route");
+const upload = require("./Routes/upload.route");
 
 
 
@@ -26,6 +27,7 @@ app.use(passport.session());
 
 
 app.use('/auth',auth);
+app.use('/update',upload);
 
 app.get('',(req,res)=>{
     res.send("EndPoint");
