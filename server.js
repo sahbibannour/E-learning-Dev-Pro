@@ -9,7 +9,6 @@ const auth = require("./Routes/user.route");
 const upload = require("./Routes/upload.route");
 
 
-
 const app = express();
 
 const port =process.env.PORT;
@@ -26,8 +25,9 @@ app.use(passport.session());
 
 
 
+
 app.use('/auth',auth);
-app.use('/update',upload);
+app.use('/upload',upload);
 
 app.get('',(req,res)=>{
     res.send("EndPoint");

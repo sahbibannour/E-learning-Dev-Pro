@@ -7,7 +7,8 @@ export class UploadService {
 
   constructor(private http: HttpClient) { }
 
-  PushUpload(){
-    return this.http.post('http://localhost:3000/upload/pdf');
+  PushUpload(data:any){
+    console.log(data);
+    return this.http.post('http://localhost:3000/upload/file',data );
   }
 }

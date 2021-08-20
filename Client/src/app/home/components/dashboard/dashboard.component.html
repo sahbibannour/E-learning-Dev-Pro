@@ -1,12 +1,12 @@
 
 <div class="container col-lg-10 ">
-<form>
+  <input type="file" name="file" />
 
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input name="foo" type="file" />
-    </div>
-   
-    <button type="submit" class="btn btn-primary" (click)="upload()">Submit</button>
-  </form>
+  <input type="file" (change)="uploadMultiple($event)" multiple />
+
+  <button type="button" class="btn btn-primary" (click)="upload($event)">upload</button>
+  
+
+
+
 </div>
