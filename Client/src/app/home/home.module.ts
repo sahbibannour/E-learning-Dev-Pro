@@ -11,6 +11,7 @@ import { AngularFileUploaderModule } from "angular-file-uploader";
 import { HomeComponent } from './home.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { CoursesComponent } from './components/courses/courses.component';
 
 
 
@@ -22,7 +23,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     DashboardComponent,
     SettingsComponent,
     HomeComponent,
-    CalendarComponent
+    CalendarComponent,
+    CoursesComponent
   ],
   imports: [
     CommonModule,

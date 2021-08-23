@@ -1,10 +1,10 @@
 
 <div class="container col-lg-10 ">
-  <input type="file" name="file" />
+  <input type="file" name="file" (change)="upload($event)" />
 
-  <input type="file" (change)="uploadMultiple($event)" multiple />
+  <input type="file" name="files"  (change)="uploadMultiple($event)" multiple />
 
-  <button type="button" class="btn btn-primary" (click)="upload($event)">upload</button>
+  <button type="button" class="btn btn-primary" >upload</button>
   
 
 
