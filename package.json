@@ -13,7 +13,7 @@
   "author": "sahbi bannour",
   "license": "ISC",
   "dependencies": {
-    "@angular/flex-layout": "^12.0.0-beta.34",
+    "@angular/flex-layout": "^12.0.0-beta.35",
     "bcryptjs": "^2.4.3",
     "body-parser": "*",
     "cors": "*",
@@ -21,11 +21,11 @@
     "express": "^4.17.1",
     "express-fileupload": "^1.2.1",
     "jsonwebtoken": "*",
-    "mongoose": "^5.13.7",
+    "mongoose": "^5.13.9",
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.0",
-    "passport": "*",
+    "passport": "^0.5.0",
     "passport-jwt": "*"
   }
 }

@@ -7,7 +7,10 @@ require('../Config/passport')(passport)
 const UserController = require("../Controllers/user.controller");
 
 
+const FormationController = require("../Controllers/formation.controller");
 
+ 
+router.post('/add-formation',FormationController.AddFormation);
 
 router.post('/login',UserController.authenticate);
 

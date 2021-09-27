@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-let userSchema = new mongoose.Schema({
+let formationSchema = new mongoose.Schema({
         Name: String,
         email:String,
         discription:String,
@@ -10,16 +10,16 @@ let userSchema = new mongoose.Schema({
 
 
 
-const Formation = module.exports = mongoose.model('formation', userSchema, 'formations');
+const Formation = module.exports = mongoose.model('formation', formationSchema, 'formations');
 
 module.exports.GetFormationById = function(id , callback){
-    User.findById(id , callback);
+    Formation.findById(id , callback);
 
 }
 
 module.exports.GetUserByFormationName = function(Name , callback){
    const query = {Name : Name}
-   User.findOne(query , callback);
+  Formation.findOne(query , callback);
   
 }
 
